@@ -17,6 +17,7 @@ new class extends Component
     }
 
     #[On('chirp-created')]
+    #[On('chirp-updated')]
     public function getChirps(): void
     {
         $this->editing = null; 
