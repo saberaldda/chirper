@@ -4,6 +4,25 @@
 
 Laravel Chirper Full Stack App was developed based on Laravel Bootcamp, and it is based on Livewire for frontend.
 
+## Tools & Libs I use in the Chirper
+   - [PHP](https://www.php.net/)
+
+   - [Laravel](https://laravel.com/)
+
+   - [Livewire](https://livewire.laravel.com/docs)
+
+   - [Laravel Volt](https://livewire.laravel.com/docs/volt)
+
+   - [Laravel Breeze](https://laravel.com/docs/starter-kits#laravel-breeze)
+
+   - [Laravel Sail](https://laravel.com/docs/sail)
+
+   - [Docker](https://www.docker.com/)
+
+   - [SQLite](https://www.sqlite.org/index.html)
+
+   - [Tailwind CSS](https://tailwindcss.com/)
+
 ## Table of Contents
 
 - [Docker installation](#prerequisites-with-docker)
