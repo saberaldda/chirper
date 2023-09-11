@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\SocialiteAuthController;
 use App\Http\Controllers\ChirpController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
@@ -37,5 +38,8 @@ Route::get('/chirps', [ChirpController::class, 'index'])
     Route::get('/notifications', [NotificationController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('notifications');
+
+    Route::get('/auth/github/redirect', [SocialiteAuthController::class, 'githubRedirect'])->name('github-login');
+    Route::get('/auth/github/callback', [SocialiteAuthController::class, 'githubCallback']);
 
 require __DIR__.'/auth.php';

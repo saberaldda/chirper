@@ -2,6 +2,21 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <div class="flex items-center justify-center">
+        <a href="{{ route('github-login') }}">
+            <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
+                alt="Github Icon"
+                width="50px"
+                class="mx-auto scale-100 hover:scale-125 ease-in duration-200">
+        </a>
+        <a href="">
+            <img src="https://icon-library.com/images/google-crome-icon/google-crome-icon-13.jpg"
+                alt="Github Icon"
+                width="55px"
+                class="mx-auto scale-100 hover:scale-125 ease-in duration-200">
+        </a>
+    </div>
+
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
