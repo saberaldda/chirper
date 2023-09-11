@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChirpController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,5 +33,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/chirps', [ChirpController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('chirps');
+
+    Route::get('/notifications', [NotificationController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('notifications');
 
 require __DIR__.'/auth.php';
