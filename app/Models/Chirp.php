@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Events\ChirpCreated;
+use App\Events\ChirpCreatedEvent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -16,7 +16,7 @@ class Chirp extends Model
     ];
 
     protected $dispatchesEvents = [
-        'created' => ChirpCreated::class,
+        'created' => ChirpCreatedEvent::class,
     ];
 
     public function user(): BelongsTo

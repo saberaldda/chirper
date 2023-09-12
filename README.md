@@ -83,6 +83,22 @@ Here is how you can run the project with Docker (Laravel Sail):
         ```
     > Make sure to follow your database username and password
 
+    - set mail provider credentials 
+        ```sh 
+        MAIL_HOST=
+        MAIL_PORT=2525
+        MAIL_USERNAME=
+        MAIL_PASSWORD=
+        MAIL_ENCRYPTION=tls
+        ```
+    - set socialite provider credentials 
+        ```sh 
+        GITHUB_CLIENT_ID=
+        GITHUB_CLIENT_SECRET=
+        GITHUB_CALLBACK_URI=
+        ...
+        ```
+
 1. Generate key 
     ```sh
     ./vendor/bin/sail artisan key:generate
@@ -140,6 +156,21 @@ Here is how you can run the project locally:
         DB_PASSWORD=[YOUR PASSWORD]
         ```
     > Make sure to follow your database username and password
+    - set mail provider credentials 
+        ```sh 
+        MAIL_HOST=
+        MAIL_PORT=2525
+        MAIL_USERNAME=
+        MAIL_PASSWORD=
+        MAIL_ENCRYPTION=tls
+        ```
+    - set socialite provider credentials 
+        ```sh 
+        GITHUB_CLIENT_ID=
+        GITHUB_CLIENT_SECRET=
+        GITHUB_CALLBACK_URI=
+        ...
+        ```
 
 1. Install PHP dependencies 
     ```sh

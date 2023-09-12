@@ -2,6 +2,9 @@ laravel dusk
 
 laravel blade ui kit
 
+laravel socialite
+
+push notifications
 
 following account (notify me about the ones i follow only)
 

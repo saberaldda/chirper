@@ -4,7 +4,7 @@ namespace App\Jobs;
 
 use App\Models\Chirp;
 use App\Models\User;
-use App\Notifications\NewChirp;
+use App\Notifications\NewChirpNotification;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -33,6 +33,6 @@ class SendChirpNotificationJob implements ShouldQueue
      */
     public function handle(): void
     {
-        $this->user->notify(new NewChirp($this->chirp));
+        $this->user->notify(new NewChirpNotification($this->chirp));
     }
 }
