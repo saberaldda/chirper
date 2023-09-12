@@ -30,6 +30,8 @@
                 </header>
             @endif
 
+            <x-alert/>
+
             <!-- Page Content -->
             <main>
                 {{ $slot }}

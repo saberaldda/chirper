@@ -39,7 +39,8 @@ Route::get('/chirps', [ChirpController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('notifications');
 
-    Route::get('/auth/github/redirect', [SocialiteAuthController::class, 'githubRedirect'])->name('github-login');
-    Route::get('/auth/github/callback', [SocialiteAuthController::class, 'githubCallback']);
+    Route::get('/auth/{provider}/redirect', [SocialiteAuthController::class, 'redirect'])->name('social-login');
+    Route::get('/auth/{provider}/callback', [SocialiteAuthController::class, 'callback']);
+    Route::get('/auth/{provider}/user', [SocialiteAuthController::class, 'index']);
 
 require __DIR__.'/auth.php';

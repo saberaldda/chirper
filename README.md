@@ -15,6 +15,8 @@ Laravel Chirper Full Stack App was developed based on Laravel Bootcamp, and it i
 
    - [Laravel Breeze](https://laravel.com/docs/starter-kits#laravel-breeze)
 
+   - [Laravel Socialite](https://laravel.com/docs/socialite)
+
    - [Laravel Sail](https://laravel.com/docs/sail)
 
    - [Docker](https://www.docker.com/)

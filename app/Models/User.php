@@ -13,12 +13,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'github_id',
-        'password',
-    ];
+    protected $guarded;
 
     protected $hidden = [
         'password',
@@ -35,4 +30,8 @@ class User extends Authenticatable
         return $this->hasMany(Chirp::class);
     }
 
+    public function socials()
+    {
+        return $this->hasMany(Social::class);
+    }
 }
