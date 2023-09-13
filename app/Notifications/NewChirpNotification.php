@@ -6,6 +6,7 @@ use App\Models\Chirp;
 use Illuminate\Bus\Queueable;
 use Illuminate\Support\Str;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -49,13 +50,12 @@ class NewChirpNotification extends Notification
      *
      * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toDatabase(object $notifiable): array
     {
         return [
             'message'   => 'New Chirp "'.$this->chirp->message.'" Created',
             'chirp'     => $this->chirp,
             'owner'     => $this->chirp->user->name,
-
         ];
     }
 }

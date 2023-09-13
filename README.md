@@ -25,6 +25,10 @@ Laravel Chirper Full Stack App was developed based on Laravel Bootcamp, and it i
 
    - [Tailwind CSS](https://tailwindcss.com/)
 
+   - [Pusher](https://tailwindcss.com/)
+
+   - [Laravel Echo](https://tailwindcss.com/)
+
 ## Table of Contents
 
 - [Docker installation](#prerequisites-with-docker)

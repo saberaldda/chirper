@@ -11,9 +11,7 @@ class Chirp extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'message',
-    ];
+    protected $guarded;
 
     protected $dispatchesEvents = [
         'created' => ChirpCreatedEvent::class,
