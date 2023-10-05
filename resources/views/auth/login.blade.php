@@ -3,6 +3,15 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="flex items-center justify-center">
+    <h4>{{ __("Don't have an account?") }}
+        <a class="underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+            href="{{ route('register') }}">
+            {{ __('Sign Up') }}
+        </a>
+    </h4>
+    </div>
+    <br>
+    <div class="flex items-center justify-center">
         <a href="{{ route('social-login', 'facebook') }}">
             <img src="https://icon-library.com/images/free-facebook-icon/free-facebook-icon-11.jpg"
                 alt="Github Icon"
