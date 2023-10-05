@@ -1,4 +1,33 @@
 <x-guest-layout>
+    <div class="flex items-center justify-center">
+        <h4>{{ __("Already have an account?") }}
+            <a class="underline text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                href="{{ route('login') }}">
+                {{ __('Log In') }}
+            </a>
+        </h4>
+    </div>
+    <br>
+    <div class="flex items-center justify-center">
+        <a href="{{ route('social-login', 'facebook') }}">
+            <img src="https://icon-library.com/images/free-facebook-icon/free-facebook-icon-11.jpg"
+                alt="Github Icon"
+                width="44px"
+                class="mx-auto scale-100 hover:scale-125 ease-in duration-200 mr-1">
+        </a>
+        <a href="{{ route('social-login', 'github') }}">
+            <img src="https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
+                alt="Github Icon"
+                width="50px"
+                class="mx-auto scale-100 hover:scale-125 ease-in duration-200">
+        </a>
+        <a href="{{ route('social-login', 'google') }}">
+            <img src="https://icon-library.com/images/google-crome-icon/google-crome-icon-13.jpg"
+                alt="Github Icon"
+                width="55px"
+                class="mx-auto scale-100 hover:scale-125 ease-in duration-200">
+        </a>
+    </div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
