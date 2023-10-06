@@ -14,7 +14,11 @@ return new class extends Migration
         Schema::create('socials', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-            $table->nullableMorphs('social');
+            
+            // $table->nullableMorphs('social');
+            $table->unsignedBigInteger('social_id')->nullable();
+            $table->string('social_type')->nullable();
+
             $table->text('social_token');
             $table->timestamps();
         });
