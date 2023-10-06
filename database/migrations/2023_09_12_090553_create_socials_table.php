@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->nullableMorphs('social');
-            $table->string('social_token');
+            $table->text('social_token');
             $table->timestamps();
         });
     }
