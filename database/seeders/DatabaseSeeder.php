@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'saber@tds.com',
         ]);
 
-        \App\Models\User::factory(2)->create();
+        // \App\Models\User::factory(2)->create();
     }
 }

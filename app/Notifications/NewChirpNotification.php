@@ -29,7 +29,7 @@ class NewChirpNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['mail', 'database'];
+        return ['mail', 'database', 'broadcast'];
     }
 
     /**
@@ -51,6 +51,15 @@ class NewChirpNotification extends Notification
      * @return array<string, mixed>
      */
     public function toDatabase(object $notifiable): array
+    {
+        return [
+            'message'   => 'New Chirp "'.$this->chirp->message.'" Created',
+            'chirp'     => $this->chirp,
+            'owner'     => $this->chirp->user->name,
+        ];
+    }
+
+    public function toBroadcast(object $notifiable): array
     {
         return [
             'message'   => 'New Chirp "'.$this->chirp->message.'" Created',
