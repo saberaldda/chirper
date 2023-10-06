@@ -24,7 +24,7 @@ class SendChirpCreatedListener
      */
     public function handle(ChirpCreatedEvent $event): void
     {
-        $users = User::where('id', '!=', $event->chirp->user_id)->get();
+        $users = User::get();
 
         foreach ($users as $user) {
             dispatch(new SendChirpNotificationJob($user, $event->chirp))->delay(now()->addSeconds(5));
